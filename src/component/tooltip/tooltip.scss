@@ -1,3 +1,22 @@
+.button-demo{
+  margin:110px 40px;
+  border:1px solid black;
+  border-radius: 6px;
+}
+.button-group{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+
+  .btn{
+    background-color: black;
+    color: white;
+    width: 130px;
+    height:60px;
+    border-radius: 6px;
+  }
+}
+
 .custom-tooltip-wrapper {
     position: relative;
     display: inline-block;
@@ -95,6 +114,26 @@
       top: calc(100% + 10px);
       left: 10%;
       transform: translateX(-50%);
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 0 5px 5px 5px;
+        border-color: transparent transparent #005DB4 transparent;
+        border-style: solid;
+      }
+    }
+
+    &.custom-tooltip-bottomRight {
+      top: calc(100% + 10px);
+      left: 80%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      min-width: 10px;
+      max-width: 500px;
   
       &::after {
         content: "";
